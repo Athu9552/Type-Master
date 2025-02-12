@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="x-icon" href="1.png">
+  <title>Typing Speed Test</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Background Video -->
+<video autoplay loop muted>
+  <source src="bg1.mp4"/>
+  Your browser does not support the video tag.
+</video>
+
+<p id="timer">00:30</p>
+  <div class="container">
+    <div class="textarea">
+      <h1>Typing Speed Test</h1>
+      <textarea placeholder="Random Text Genrate" id="randomText" cols="80" rows="" style="height: 35px;"></textarea>
+      <textarea disabled name="" placeholder="Type Here...." id="textInput" cols="80" rows="12"></textarea>
+      <p id="result"></p><br>
+      <button id="btn">Start</button>
+      <button id="btn1">Restart</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
