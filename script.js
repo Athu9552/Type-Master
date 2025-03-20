@@ -71,17 +71,21 @@ function startTimer(duration) {
 // Start Button Logic.
 btn.addEventListener("click", function () {
   if (btn.innerText === "Start") {
+    // Clear previous text and results when starting a new test
+    textInput.value = "";
+    result.innerHTML = "";
+
     let time = new Date();
     startTime = time.getTime();
     btn.innerText = "Done";
     textInput.disabled = false;
     textInput.style.backgroundColor = "white";
 
-    let randomNum = Math.random() * data.length;
-    let randomValue = Math.floor(randomNum);
-    randomText.innerHTML = data[randomValue];
+    // Select a new random sentence
+    let randomNum = Math.floor(Math.random() * data.length);
+    randomText.innerHTML = data[randomNum];
 
-    startTimer(30);  // Start 1-minute timer.
+    startTimer(30);  // Start 30-second timer
   } 
   else if (btn.innerText === "Done") {
     clearInterval(timerInterval);
@@ -95,7 +99,7 @@ btn.addEventListener("click", function () {
 // Restart Button Logic
 btn1.addEventListener("click", function () {
   clearInterval(timerInterval);
-  timerDisplay.textContent = "00:30";  // Reset timer display to 1 minutes
+  timerDisplay.textContent = "00:30";  // Reset timer display to 30 seconds
   textInput.value = "";
   randomText.innerHTML = "";
   result.innerHTML = "";
